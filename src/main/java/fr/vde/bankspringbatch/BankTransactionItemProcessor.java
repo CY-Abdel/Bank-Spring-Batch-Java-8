@@ -13,8 +13,8 @@ public class BankTransactionItemProcessor implements ItemProcessor<BankTransacti
 
 //  private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy-HH:mm");
 
-  private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-
+//  private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+  private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy-HH:mm");
 
 
   @Override

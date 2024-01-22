@@ -1,5 +1,6 @@
 package fr.vde.bankspringbatch.controllers;
 
+import fr.vde.bankspringbatch.config.BankTransactionItemAnalyticsProcessor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.*;
 import org.springframework.batch.core.launch.JobLauncher;
@@ -19,6 +20,9 @@ public class BankRestController {
   @Autowired
   private Job job;
 
+  @Autowired
+  private BankTransactionItemAnalyticsProcessor analyticsProcessor;
+
   @GetMapping("/startJob")
   public BatchStatus load() throws Exception {
     Map<String, JobParameter> params = new HashMap<>();
@@ -34,5 +38,15 @@ public class BankRestController {
     }
 
     return jobExecution.getStatus();
+  }
+
+  @GetMapping("/analytics")
+  public Map<String, Double> analytics() {
+
+    Map<String, Double> map = new HashMap<>();
+    map.put("totalCredit", analyticsProcessor.getTotalCredit());
+    map.put("totalDebit", analyticsProcessor.getTotalDebit());
+
+    return map; //JSON
   }
 }

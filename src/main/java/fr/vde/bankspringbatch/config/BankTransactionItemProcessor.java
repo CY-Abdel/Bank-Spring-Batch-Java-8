@@ -1,4 +1,4 @@
-package fr.vde.bankspringbatch;
+package fr.vde.bankspringbatch.config;
 
 import fr.vde.bankspringbatch.entities.BankTransaction;
 import org.springframework.batch.item.ItemProcessor;
@@ -8,12 +8,9 @@ import org.springframework.stereotype.Component;
 import java.text.SimpleDateFormat;
 
 
-@Component
+//@Component
 public class BankTransactionItemProcessor implements ItemProcessor<BankTransaction, BankTransaction> {
 
-//  private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy-HH:mm");
-
-//  private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
   private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy-HH:mm");
 
 

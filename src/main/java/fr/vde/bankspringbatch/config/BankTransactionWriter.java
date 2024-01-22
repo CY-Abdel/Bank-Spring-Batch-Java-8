@@ -1,4 +1,4 @@
-package fr.vde.bankspringbatch;
+package fr.vde.bankspringbatch.config;
 
 import fr.vde.bankspringbatch.entities.BankTransaction;
 import fr.vde.bankspringbatch.repository.BankTransactionRepository;

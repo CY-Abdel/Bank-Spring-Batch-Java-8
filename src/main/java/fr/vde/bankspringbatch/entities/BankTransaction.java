@@ -20,7 +20,7 @@ public class BankTransaction {
   private Date transactionDate;
   @Transient // il ne sera pas persisté a la BDD avec JPA
   private String strTransactionDate;
-  private Character transactionType;
+  private String transactionType;
   private Double amount;
 
 
